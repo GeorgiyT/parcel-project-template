@@ -1,4 +1,5 @@
 <section class="contacts">
+    
     <div class="container">
         <h2 class="contacts-title visually-hidden">Contacts</h2>
         <ul class="contacts-list">
@@ -55,12 +56,45 @@
             </li>
         </ul>
         <div class="contacts-button">
-                <button type="button" class="main-button contacts-btn">Our Locations<svg class="main-button-svg" >
+                <button type="button"  class="main-button contacts-btn">Our Locations<svg class="main-button-svg" >
                     <use href="./images/sprite.svg#icon-arrow-more"></use>
                 </svg></button>
-                <button type="button" class="secondary-button contacts-btn">Franchise<svg class="secondary-button-svg">
+                <button data-modal-open type="button" class="secondary-button contacts-btn">Franchise<svg class="secondary-button-svg">
                     <use href="./images/sprite.svg#icon-arrow-more"></use>
                 </svg></button>
         </div>
     </div>
+    <div data-modal class="backdrop is-hidden">
+        <div class="contacts-modal">
+            <button data-modal-close class="contacts-modal-button" type="button">
+                <svg width="14" height="14" class="contacts-modal-svg">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <form action="" class="js-speaker-form">
+                <h2 class="contacts-modal-title">Leave your details, our manager will call you back</h2>
+                <div class="contacts-form-field">
+                    <label for="name">Name</label>
+                    <input class="contacts-form-input" type="text" name="name" id="name">
+                </div>
+                <div class="contacts-form-field">
+                    <label for="tel">Telephone</label>
+                    <input class="contacts-form-input" type="tel" name="tel" id="tel">
+                </div>
+                <div class="contacts-form-field">
+                    <label for="email">E-mail</label>
+                    <input class="contacts-form-input" type="email" name="email" id="email">
+                </div>
+                <div class="contacts-form-field">
+                    <label for="comment">Сomment</label>
+                    <textarea name="comment" id="comment" placeholder="Enter text"></textarea>
+                </div>
+                <img class="contacts-form-img" src="./images/about/mobile/cow@1x-320.png" width="270" alt="cow">
+                <div class="contacts-submit-wrap">
+                    <button class="main-button contacts-modal-btn" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>
+<script src="./modal.js"></script>
