@@ -6,13 +6,13 @@ function readMore(){
     if(dots.style.display === "none"){
         dots.style.display="inline";
         btn.innerHTML=`Read more  <svg class="made-arrow">
-        <use href="./img/symbol-defs.svg#icon-arrow"></use>
+        <use href="./images/sprite.svg#icon-arrow-more"></use>
     </svg>`;
         more.style.display="none";
     } else{
         dots.style.display="none";
         btn.innerHTML=`Cancel  <svg class="made-arrow">
-        <use href="./img/symbol-defs.svg#icon-arrow"></use>
+        <use href="./images/sprite.svg#icon-arrow-more"></use>
     </svg>`;
         more.style.display="inline";
     }

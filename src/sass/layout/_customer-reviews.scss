@@ -1,43 +1,115 @@
+// .customer-reviews-list{
+//   padding-left: 178px;
+//   padding-right: 176px;
+// }
+
+.customer-reviews-item{
+  @media screen and (min-width: 768px){
+  padding: 0 74px;
+  }
+
+  @media screen and (min-width: 768px){
+    padding: 121px 63px 119px 63px;
+    }
+}
+
 .customer-reviews-background{
   width: 100%;
 
   margin-bottom: 30px;
   padding: 43px 66px 26px 57px;
 
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
   font-size: 12px;
   line-height: 255%;
   text-align: center;
   color: #000000;
   background-color: #FAFAFA;
+
+  @media screen and (min-width: 768px){
+    font-size: 14px;
+    line-height: 216%;
+    letter-spacing: 0.04em;
+    
+    margin-bottom: 24px;
+    padding: 30px 36px 28px 40px;
   }
 
+  @media screen and (min-width: 1280px){  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 15px;
+    padding: 47px 89px 39px 87px;
+  }
+}
+
 .customer-reviews-text{
+  
   background: repeating-linear-gradient( 
   180deg,
   transparent 0px,
   transparent 29px,
   #E1E1E1 30px);
-}
+  position: relative;
+  z-index: 1;
 
+
+  &::before {
+    width: 54px;
+    height: 40px;
+
+    content: "";
+    z-index: -1;
+    top: -5%;
+    left: 0;
+
+    position: absolute;
+    background-image: url(../images/customer-reviews/quotes.svg#icon-quotes);
+ 
+    @media screen and (min-width: 768px){
+    top: -15%;
+    left: -5%;
+    }
+
+    @media screen and (min-width: 1280px){
+      top: -23%;
+      left: -1%;
+      }
+  }
+}
 
 .customer-reviews-img{
   margin: 0 auto 29px;
   display: block;
   width: 85px;
   height: 85px;
+
+  @media screen and (min-width: 768px){
+  margin-bottom: 19px;
+  }
+
+  @media screen and (min-width: 1280px){
+    margin-bottom: 15px;
+    }
 }
 
 .customer-reviews-name {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
   font-size: 14px;
   line-height: 186%;
   text-align: center;
   color: #000000;
+
+  @media screen and (min-width: 768px){
+  font-size: 16px;
+  line-height: 186%;
+  }
+
+  @media screen and (min-width: 1280px){
+  font-size: 20px;
+  line-height: 186%;
+}
 }
 
 .customer-reviews-dots {
@@ -48,6 +120,14 @@
   margin: 0 auto 18px;
   background-color: #C7133E;
   position: relative;
+
+  @media screen and (min-width: 768px){
+  margin-bottom: 14px;
+  }
+
+  @media screen and (min-width: 768px){
+    margin-bottom: 15px;
+  }
   
   &::before{
   content: "";
