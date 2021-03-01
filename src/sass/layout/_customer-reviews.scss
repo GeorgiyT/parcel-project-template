@@ -1,7 +1,16 @@
+// .customer-reviews-list{
+//   padding-left: 178px;
+//   padding-right: 176px;
+// }
+
 .customer-reviews-item{
   @media screen and (min-width: 768px){
   padding: 0 74px;
   }
+
+  @media screen and (min-width: 768px){
+    padding: 121px 63px 119px 63px;
+    }
 }
 
 .customer-reviews-background{
@@ -10,9 +19,6 @@
   margin-bottom: 30px;
   padding: 43px 66px 26px 57px;
 
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
   font-size: 12px;
   line-height: 255%;
   text-align: center;
@@ -90,9 +96,6 @@
 }
 
 .customer-reviews-name {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
   font-size: 14px;
   line-height: 186%;
   text-align: center;
