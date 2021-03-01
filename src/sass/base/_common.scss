@@ -26,6 +26,7 @@ ul,
 ol {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 a {
@@ -33,15 +34,8 @@ a {
   font-style: normal;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 body {
   font-family: $main-font;
-  background: #e5e5e5;
   font-weight: 500;
 }
 
@@ -49,4 +43,8 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+svg {
+  stroke: black; //Нужно удалить после того как все дадут стили своим свгшкам
 }
