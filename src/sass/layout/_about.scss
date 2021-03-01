@@ -1,7 +1,7 @@
 .made{
 padding-top: 125px;
 padding-bottom: 39px;
-background-color:#FFF5F6;
+background-color:$sections-background;
 background-repeat: no-repeat;
 background-image: url('../images/about/mobile/milkfon@2x-320.png');
 background-size: contain;
@@ -36,12 +36,12 @@ background-position-y: 90%;
 }
 .made-tradition {
 display: block;
-font-family: Titan One;
+font-family: $headers-font;
 font-size: 18px;
 line-height: 1.17;
 text-align: center;
 text-transform: uppercase;
-color: #FFA5BA;
+color: $label-color;
 margin-bottom: 15px;
 @media screen and (min-width: 768px) {
   font-size: 26px;
@@ -56,12 +56,12 @@ line-height: 1.13;
 width: 100%;
 margin: 0 auto 26px;
 text-align: center;
-font-family: Titan One;
+font-family:$headers-font;
 font-size: 34px;
 line-height: 1.15;
 letter-spacing: 0.04em;
 text-transform: uppercase;
-color: #D41443;
+color: $title-color;
 @media screen and (min-width: 768px) {
   font-size: 48px;
 margin-bottom: 100px;
@@ -86,7 +86,7 @@ width: 100%;
 padding-right: 30px;
 padding-left: 30px;
 text-align: start;
-font-family: DM Sans;
+font-family: $main-font;
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
@@ -112,14 +112,14 @@ margin-bottom: 35px;
 }
 .made-subtitle{
 margin-bottom: 20px;
-color: #907E82;
+color: $simple-text-color;
 @media screen and (min-width: 768px) {
 letter-spacing: 0.04em;
 }
 }
 .made-indent{
 letter-spacing: 0.04em;
-color: #907E82;
+color: $simple-text-color;
 display: block;
 margin-bottom: 25px;
 @media screen and (min-width: 768px) {
@@ -134,7 +134,7 @@ padding-right: 38px;
 padding-left: 37px;
 position: relative;
 display: inline-block;
-font-family: DM Sans;
+font-family: $main-font;
 font-weight: bold;
 font-size: 14px;
 line-height: 1.29;
@@ -144,10 +144,10 @@ height: 44px;
 border: 1px solid transparent;
 border-radius: 22px;
 background-color:#FFFFFF;
-color: #D41443;
+color: $title-color;
 &:hover,
 &:focus {
-  background-color:  #ECEBEB;
+  background-color: $secondary-accent-color;
   
 }
 @media screen and (min-width: 768px) {
@@ -161,7 +161,7 @@ color: #D41443;
   height: 10px;
  right: 37px;
  top: 17px;
- stroke:#D41443;
+ stroke:$title-color;
 }
 .made-img{
   flex-shrink: 0;
