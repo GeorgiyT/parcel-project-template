@@ -12,15 +12,16 @@ function burgerMenu(selector) {
   links.on('click', () => toggleMenu());
   overlay.on('click', () => toggleMenu());
   
-  function toggleMenu(){
+  function toggleMenu() {
     menu.toggleClass('burger-menu_active');
     
     if (menu.hasClass('burger-menu_active')) {
-      $('body').css('overlow', 'hidden');
-    } else {
-      $('body').css('overlow', 'visible');
+        $('body').css('overflow', 'hidden');
+      } else {
+        $('body').css('overflow', 'visible');
+      }
+     
     }
   }
-}
 
 burgerMenu('.burger-menu');
