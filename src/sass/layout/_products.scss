@@ -34,7 +34,7 @@
 
 .products-item {
   margin: auto;
-  min-height: 485px;
+  min-height: 400px;
   display: block;
   border-radius: 24px;
   margin-top: 144px;
@@ -151,7 +151,6 @@
 
 .products-list{
   margin-bottom: 98px;
-  position: relative;
 }
 
 
@@ -196,7 +195,7 @@
   .products-item {
       margin-bottom: 130px;
       width: 220px;
-      height: 485px;
+      min-height: 485px;
       padding: 155px 11px 4px 11px;
       &:not(:last-child) {
         margin-right: 20px;
@@ -207,12 +206,8 @@
       left:12px;
       margin-bottom: 30px;
   }
-
-
-// .products-button {
-//   bottom: 4%;
-//   }
 }
+
 
 // ---------------1280px----------------------
 
@@ -249,11 +244,11 @@
   .products-item {
     padding: 170px 44px 50px 44px;
     position: relative;
-      margin-top: 259px;
-      width: 335px;
-      height: 525px;
-      &:not(:last-child) {
-        margin-right: 24px;
+    margin-top: 259px;
+    width: 335px;
+    min-height: 525px;
+    &:not(:last-child) {
+      margin-right: 24px;
   }
 }
   .products-title{
@@ -274,11 +269,10 @@
 	&::before {
     content: "";
 
-    width: 100%;
+    width: 249px;
     height: 252px;
 		position: absolute;
-		margin: 0 auto;
-		
+	
 		background-size: contain;
     display: block;
     
@@ -293,7 +287,7 @@
     background-image: url("../images/products/mobile/con@1x-320.png");
     background-repeat: no-repeat;
 
-    @media screen and (min-width: 786px) {
+    @media screen and (min-width: 768px) {
       background-image: url("../images/products/tablet/con@1x-768.png");
       height: 220px;
       width: 224px;
@@ -332,7 +326,7 @@
     background-image: url("../images/products/mobile/icelatte@1x-320.png");
     background-repeat: no-repeat;
   
-    @media screen and (min-width: 786px) {
+    @media screen and (min-width: 768px) {
       background-image: url("../images/products/tablet/icelatte@1x-768.png");
       height: 220px;
       width: 233px;
@@ -371,7 +365,7 @@
     background-image: url("../images/products/mobile/milkshakes@1x-320.png");
     background-repeat: no-repeat;
 
-    @media screen and (min-width: 786px) {
+    @media screen and (min-width: 768px) {
       background-image: url("../images/products/tablet/milkshakes@1x-768.png");
       height: 220px;
       width: 224px;
@@ -401,4 +395,27 @@
       background-image: url("../images/products/desktop/milkshakes@2x-1200.png");
     }
   }
+}
+
+
+
+
+// -----------------------MODAL  WINDOW------------------------------
+
+.modal-bg{
+  position:fixed;
+  width: 100%;
+  height: 100hv;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  width: 30%;
+  height: 30%; 
 }
