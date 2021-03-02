@@ -56,7 +56,7 @@
             </li>
         </ul>
         <div class="contacts-button">
-                <button type="button"  class="main-button contacts-btn">Our Locations<svg class="main-button-svg" >
+                <button data-maps-open type="button"  class="main-button contacts-btn">Our Locations<svg class="main-button-svg" >
                     <use href="./images/sprite.svg#icon-arrow-more"></use>
                 </svg></button>
                 <button data-modal-open type="button" class="secondary-button contacts-btn">Franchise<svg class="secondary-button-svg">
@@ -96,5 +96,20 @@
             </form>
         </div>
     </div>
+    <div data-maps class="backdrop is-hidden">
+        <div class="contacts-modal map">
+            <button data-maps-close class="contacts-modal-button" type="button">
+                <svg width="14" height="14" class="contacts-modal-svg">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <p class="contacts-map-text">We here</p>
+        <div id="map" class="contacts-map-wrap" style="width: 260px; height: 400px;"></div>
+        </div>
+    </div>
+      
 </section>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="./modal.js"></script>
+<script src="./maps.js"></script>
+<script src="./jmaps.js"></script>
