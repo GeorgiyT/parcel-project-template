@@ -219,6 +219,7 @@
   }
   &-btncontainer {
     display: flex;
+    padding-top: 20px;
   }
 }
 .burger-menu > .hide {
@@ -310,12 +311,9 @@
       display: none;
     }
   }
-  .slogan-button {
-    margin-top: 20px;
-  }
   .header-slogan-milk {
     display: flex;
-    margin-top: 20px;
+    padding-top: 20px;
     width: 300px;
     &_text {
       width: 114px;
@@ -323,15 +321,16 @@
       font-size: 8px;
       line-height: 1.5em;
       color: #ffffff;
-      margin-top: 50px;
+      padding-top: 50px;
       margin-left: -3px;
     }
+    & .pointer-button {
+      margin-top: 7px;
+      width: 18px;
+      height: 18px;
+    }
   }
-  .pointer-button {
-    margin-top: 7px;
-    width: 18px;
-    height: 18px;
-  }
+
   // picture {
   //   width: 124px;
   // }
@@ -371,7 +370,7 @@
   }
   .cafe,
   .track {
-    transform: translate(-25%, 10%);
+    transform: translate(0%, 0%);
   }
   .cafe::before,
   .track::before {
@@ -433,7 +432,6 @@
     width: 277px;
     height: 137px;
     top: 172px;
-    left: 69px;
     &_text {
       font-size: 38px;
       line-height: 1.145em;
@@ -443,19 +441,16 @@
       line-height: 0.9em;
     }
     &-milk {
-      margin-top: 56px;
+      padding-top: 56px;
       margin-left: -30px;
-      width: 400px;
+      width: 418px;
       &_text {
-        width: 200px;
-        height: 78px;
+        width: 52%;
         font-size: 14px;
         line-height: 1.4em;
-
-        // margin-top: 50px;
-        margin-left: 30px;
+        padding-left: 30px;
       }
-      .pointer-button {
+      & .pointer-button {
         margin-top: 20px;
         width: 26px;
         height: 26px;
@@ -523,7 +518,7 @@
   .burger-menu_nav {
     position: absolute;
     flex-flow: row;
-    width: 100%;
+    width: 60%;
     top: 50px;
     left: 250px;
     height: 30px;
@@ -534,11 +529,20 @@
     font-size: 16px;
     line-height: 1.31em;
     border: none;
-  }
-  .burger-menu_link:last-child {
-    border: none;
+    padding: 0;
+
+    &:last-child {
+      border: none;
+    }
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
   }
   .hide2 {
     display: none;
+  }
+  .logo {
+    position: absolute;
+    left: -69px;
   }
 }
