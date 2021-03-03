@@ -136,20 +136,10 @@ function burgerMenu(selector) {
 
   function toggleMenu() {
     menu.toggleClass('burger-menu_active');
-
-    if (menu.hasClass('burger-menu_active')) {
-      $('body').css('overflow', 'hidden');
-    } else {
-      $('body').css('overflow', 'visible');
-    }
   }
 
   function removeMenu() {
     menu.removeClass('burger-menu_active');
-
-    if (menu.hasClass('burger-menu_active')) {
-      $('body').css('overflow', 'hidden');
-    }
   }
 }
 
@@ -182,7 +172,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60079" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
