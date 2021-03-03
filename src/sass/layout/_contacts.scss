@@ -143,6 +143,11 @@
     text-decoration: none;
     line-height: 1.5;
     color: $simple-text-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $title-color;
+    }
   }
 
   &-button {
@@ -244,6 +249,7 @@
     justify-content: space-between;
     margin-bottom: 10px;
     font-size: 16px;
+
     textarea {
       width: 55%;
       padding: 5px;
@@ -280,5 +286,31 @@ textarea {
 .main-button {
   &.contacts-modal-btn {
     justify-content: center;
+  }
+}
+
+.contacts-modal.map {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/products/mobile/con@1x-320.png);
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/products/mobile/icelatte@1x-320.png);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/products/mobile/milkshakes@1x-320.png);
+  }
+}
+
+.contacts-map {
+  &-text {
+    margin-bottom: 15px;
+    color: $title-color;
+    font-size: 26px;
+    line-height: 1.15;
+    border-bottom: 1px solid $secondary-accent-color;
   }
 }

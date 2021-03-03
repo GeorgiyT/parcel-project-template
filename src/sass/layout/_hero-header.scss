@@ -50,7 +50,7 @@
     z-index: 30;
     width: 20px;
     height: 15px;
-    transition: 0.4s;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   &_active:hover .burger-menu_lines::before {
     background-color: #ffffff;
@@ -75,7 +75,7 @@
     width: 20px;
     height: 1px;
     background-color: $title-color;
-    // transition: 0.4s;
+    // transition: 0.5s;
   }
   &_lines {
     top: 50%;
@@ -96,13 +96,14 @@
     position: fixed; //чтобы крестик находился в меню независимщ от расширения
     top: 25px;
     left: 90%;
+    height: 20px;
   }
   &_active .burger-menu_lines::before {
-    top: 0;
+    top: 10px;
     transform: rotate(45deg);
   }
   &_active .burger-menu_lines::after {
-    top: 0;
+    top: 10px;
     transform: rotate(-45deg);
   }
 
@@ -171,8 +172,8 @@
   }
   &-imgeclips {
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 346px;
+    height: 344px;
     z-index: 1;
     top: 83px;
     left: 36px;
@@ -185,17 +186,7 @@
     top: 92px;
     z-index: 1;
   }
-  &-button {
-    border: none;
-    font-family: $main-font;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31em;
-    color: #d41443;
-    align-items: center;
-    text-align: center;
-    background: #ffffff;
-  }
+
   &-imggirl,
   &-partners {
     display: none;
@@ -228,23 +219,22 @@
   }
   &-btncontainer {
     display: flex;
+    padding-top: 20px;
   }
 }
 .burger-menu > .hide {
   display: none;
 }
 .button_buy {
-  display: flex;
+  border: none;
   justify-content: space-evenly;
   margin-left: 20px;
   margin-bottom: 19px;
   align-items: center;
   text-align: center;
-  background: #ffffff;
   border-radius: 22px;
   width: 209px;
   height: 44px;
-  color: $title-color;
 
   &:hover,
   &:focus {
@@ -298,7 +288,7 @@
   }
   .header-imgeclips {
     top: 31px;
-    left: 307px;
+    left: 273px;
   }
   .header-imgiceream {
     left: 368px;
@@ -317,13 +307,13 @@
       font-size: 34px;
       line-height: 0.88em;
     }
-  }
-  .slogan-button {
-    margin-top: 20px;
+    #muchMore {
+      display: none;
+    }
   }
   .header-slogan-milk {
     display: flex;
-    margin-top: 20px;
+    padding-top: 20px;
     width: 300px;
     &_text {
       width: 114px;
@@ -331,15 +321,16 @@
       font-size: 8px;
       line-height: 1.5em;
       color: #ffffff;
-      margin-top: 50px;
+      padding-top: 50px;
       margin-left: -3px;
     }
+    & .pointer-button {
+      margin-top: 7px;
+      width: 18px;
+      height: 18px;
+    }
   }
-  .pointer-button {
-    margin-top: 7px;
-    width: 18px;
-    height: 18px;
-  }
+
   // picture {
   //   width: 124px;
   // }
@@ -355,7 +346,7 @@
     flex-flow: column;
     position: absolute;
     right: 0;
-    top: 115px;
+    top: 97px;
     z-index: 2;
     font-weight: 400;
     color: $title-color;
@@ -374,12 +365,12 @@
     border-radius: 50%;
     background-color: #ffffff;
   }
+  .cafe {
+    margin-bottom: 25px;
+  }
   .cafe,
   .track {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: 25px;
+    transform: translate(0%, 0%);
   }
   .cafe::before,
   .track::before {
@@ -388,11 +379,9 @@
     right: -8px;
     z-index: -1;
   }
-  .cafe::after,
-  .track::after {
-    content: 'cafes';
+  .our_partners {
     position: absolute;
-
+    top: 30px;
     font-family: $main-font;
     font-weight: 400;
     font-size: 8px;
@@ -401,13 +390,10 @@
     color: #ffffff;
     text-transform: none;
   }
-  .cafe::after {
-    top: 26px;
+  .cafe .our_partners {
     left: 7px;
   }
-  .track::after {
-    content: 'food trucks';
-    top: 30px;
+  .track .our_partners {
     left: -20px;
     width: 55px;
   }
@@ -421,12 +407,18 @@
     top: 37px;
     right: 0px;
     width: 160px;
-    z-index: 3;
+    z-index: 21;
     margin: 0;
+    display: flex;
+    justify-content: space-evenly;
     cursor: pointer;
   }
   .burger-menu_active .burger-menu_lines {
     left: 97%;
+  }
+  .header-imgeclips {
+    width: 324px;
+    height: 322px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -440,7 +432,6 @@
     width: 277px;
     height: 137px;
     top: 172px;
-    left: 69px;
     &_text {
       font-size: 38px;
       line-height: 1.145em;
@@ -450,19 +441,16 @@
       line-height: 0.9em;
     }
     &-milk {
-      margin-top: 56px;
+      padding-top: 56px;
       margin-left: -30px;
-      width: 400px;
+      width: 418px;
       &_text {
-        width: 200px;
-        height: 78px;
+        width: 52%;
         font-size: 14px;
         line-height: 1.4em;
-
-        margin-top: 50px;
-        margin-left: 30px;
+        padding-left: 30px;
       }
-      .pointer-button {
+      & .pointer-button {
         margin-top: 20px;
         width: 26px;
         height: 26px;
@@ -486,7 +474,7 @@
     height: 538px;
   }
   .header-partners {
-    top: 160px;
+    top: 156px;
     font-size: 46px;
     line-height: 1.15em;
   }
@@ -502,16 +490,16 @@
     right: -15px;
     z-index: -1;
   }
-  .cafe::after,
-  .track::after {
+  .cafe .our_partners,
+  .track .our_partners {
     font-size: 14px;
     line-height: 1.28em;
   }
-  .cafe::after {
+  .cafe .our_partners {
     top: 50px;
     left: 15px;
   }
-  .track::after {
+  .track .our_partners {
     top: 50px;
     left: -29px;
     width: 94px;
@@ -530,7 +518,7 @@
   .burger-menu_nav {
     position: absolute;
     flex-flow: row;
-    width: 100%;
+    width: 60%;
     top: 50px;
     left: 250px;
     height: 30px;
@@ -541,11 +529,20 @@
     font-size: 16px;
     line-height: 1.31em;
     border: none;
-  }
-  .burger-menu_link:last-child {
-    border: none;
+    padding: 0;
+
+    &:last-child {
+      border: none;
+    }
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
   }
   .hide2 {
     display: none;
+  }
+  .logo {
+    position: absolute;
+    left: -69px;
   }
 }
