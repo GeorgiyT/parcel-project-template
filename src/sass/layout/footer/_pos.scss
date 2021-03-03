@@ -1,6 +1,8 @@
 @media (max-width:768px) {
     .footer {
         padding-top: 56px;
+    }
+    .footer-container {
         padding-bottom: 43px;
     }
     .footer-text {
@@ -21,12 +23,12 @@
 
 @media (min-width:768px) {
     .footer {
-        padding: 82px 0 36px 0;
+        padding-top: 82px;
     }
     .footer-container {
         display: flex;
         justify-content: space-between;
-        padding: 0 36px 0 97px;
+        padding: 0 36px 36px 97px;
     }
 }
 
@@ -45,11 +47,8 @@
 }
 
 @media (min-width:1280px) {
-    .footer {
-        padding: 82px 0 97px 0;
-    }
     .footer-container {
-        padding: 0 116px 0 114px;
+        padding: 0 116px 97px 114px;
     }
     .footer-label {
         width: 472px;
