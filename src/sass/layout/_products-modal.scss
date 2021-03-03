@@ -1,8 +1,15 @@
 // -----------------------MODAL  WINDOW   ICE  CREAM------------------------------
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .products-modal-bg {
     position: fixed;
-    width: 100%;
+    z-index: 100;
+    width: 100vw;
     height: 100vh;
+    overflow: scroll;
     top: 0;
     left: 0;
     background: linear-gradient(45deg, #FFA5BA, transparent);
@@ -10,8 +17,6 @@
     justify-content: center;
     align-items: center;
     transition: all 0.8s ease 0s;
-    visibility: hidden;
-    opacity: 0;
     //   transition: visibility 0s opacity 0.5s;
     &:target {
         visibility: visible;
@@ -19,16 +24,11 @@
     }
 }
 
-.modal-closing {
-    position: absolute;
-    top: -61%;
-    right: 1%;
-}
-
 .products-modal-window {
+    position: relative;
     background-color: rgb(250, 236, 236);
     width: 70%;
-    height: 60%;
+    height: 70%;
     border-radius: 20px;
     display: flex;
     max-width: 800px;
@@ -37,9 +37,13 @@
     padding-right: 30px;
 }
 
+.modal-closing {
+    position: absolute;
+    top: -12%;
+    right: -11%;
+}
+
 .products-modal-one {
-    position: relative;
-    overflow: hidden;
     &::before {
         content: "";
         position: absolute;
@@ -53,7 +57,6 @@
         background-repeat: no-repeat;
         opacity: 0.6;
         transform: rotate(20deg);
-        z-index: 66;
     }
     &:hover::before {
         content: "";
