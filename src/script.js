@@ -9,8 +9,8 @@ function burgerMenu(selector) {
     toggleMenu();
   });
   
-  links.on('click', () => toggleMenu());
-  overlay.on('click', () => toggleMenu());
+  links.on('click', () => removeMenu());
+  overlay.on('click', () => removeMenu());
   
   function toggleMenu() {
     menu.toggleClass('burger-menu_active');
@@ -21,7 +21,16 @@ function burgerMenu(selector) {
         $('body').css('overflow', 'visible');
       }
      
-    }
   }
+  function removeMenu() {
+    menu.removeClass('burger-menu_active');
+    
+    if (menu.hasClass('burger-menu_active')) {
+        $('body').css('overflow', 'hidden');
+      }
+    }
+}
+  
+
 
 burgerMenu('.burger-menu');

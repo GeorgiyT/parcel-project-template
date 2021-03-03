@@ -82,7 +82,7 @@
     background-color: transparent;
     position: fixed; //чтобы крестик находился в меню независимщ от расширения
     top: 25px;
-    left: 90%;
+    right: 28px;
     height: 20px;
   }
   &_active .burger-menu_lines::before {
@@ -214,13 +214,14 @@
 }
 .button_buy {
   border: none;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-left: 20px;
   margin-bottom: 19px;
-  padding-left: 43px;
-  align-items: center;
-  text-align: center;
-  border-radius: 22px;
+  padding-left: 62px;
+  padding-right: 47px;
+  // align-items: center;
+  // text-align: center;
+  // border-radius: 22px;
   width: 209px;
   height: 44px;
 
@@ -259,11 +260,12 @@
     width: 480px;
   }
 }
-@media screen and (min-width: 450px) and (max-width: 767px) {
-  .burger-menu_active .burger-menu_lines {
-    left: 95%;
-  }
-}
+// @media screen and (min-width: 481px) and (max-width: 767px) {
+//   .burger-menu_active .burger-menu_lines {
+//     // left: 95%;
+//     right: 28px;
+//   }
+// }
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -387,23 +389,34 @@
   }
   .burger-menu_button {
     right: 190px;
-    top: 50px;
+    top: 58px;
   }
+
+  .burger-menu .hide2 {
+    width: 186px;
+    margin: 0 auto;
+    padding-left: 52px;
+    padding-right: 42px;
+    margin-bottom: 19px;
+  }
+
   .burger-menu > .hide {
     position: absolute;
-    display: block;
+    // display: block;
     top: 37px;
     right: 0px;
     width: 160px;
     z-index: 1;
     margin: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     cursor: pointer;
-    padding-left: 37px;
+    padding-left: 40px;
+    padding-right: 36px;
   }
   .burger-menu_active .burger-menu_lines {
-    left: 97%;
+    // left: 97%;
+    right: 34px;
   }
   .header-imgeclips {
     width: 324px;
