@@ -1,65 +1,65 @@
-<!-- <div class="backdrop is-hidden" data-modal> -->
+    <div class="backdrop is-hiddenn" data-buy-now>
     <div class="modal-buy-now">
-      <button class="button-close" data-modal-close>
+      <button class="button-close" data-buy-now-close>
         <svg class="icon-close-svg">
-          <use href=""></use>
+          <use href="./images/customer-reviews/Closed.svg#icon-close"></use>
         </svg>
       </button>
-      <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
+      <h2 class="modal-title">Leave your details, we will make delivery or call you back</h2>
       
         <form name="ice-creame" autocomplete="on">
           
-        <fieldset>
+        <fieldset class="bio-list">
             <legend>BIO</legend>
-            <label>Enter your name
+            <label class="bio-item">Name
                 <input type="text" name="name" placeholder="Vaycheslav" required>
             </label>
-            <label>Enter your surname
-                <input type="text" name="surname" placeholder="Rus">
+            <label class="bio-item">Surname
+                <input type="text" name="surname" placeholder="Rusanov">
             </label>
-            <label>Enter your email
+            <label class="bio-item">Email
                 <input type="email" name="email" placeholder="aloha@gmil.com" required>
             </label>
-            <label>Enter your tel
+            <label class="bio-item">Tel
                 <input type="tel" name="tal" value="" required
                     pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$">
             </label>
         </fieldset>
 
 
-        <fieldset>
+        <fieldset class="options-list">
             <legend>OPTIONS</legend>
 
             <label>Quantity
-                <input type="number" name="quantity" min="1" max="25" value="1" step="2">
+                <input type="number" name="quantity" min="1" max="25" value="1" step="1">
             </label>
             
-
-
-            <h2>Sides</h2>
-            <label><p>Braces</p>
-                <input type="checkbox" name="sides" value="cheese" checked>
+            <h3 class="options-subtitle">Sides</h3>
+            <div class="sides-list">
+            <label class="sides-item"><p>braces</p>
+                <input type="radio" name="sides" value="braces">
             </label>
-            <label><p>wafer</p>
-                <input type="checkbox" name="sides" value="bacon">
-
-            </label>
-            <label><p>cornet</p>
-                <input type="checkbox" name="sides" value="garlic">
-            </label>
+            <label class="sides-item"><p>wafer</p>
+                <input type="radio" name="sides" value="wafer">
 
             </label>
-            <label><p>lolly</p>
-                <input type="checkbox" name="sides" value="garlic">
+            <label class="sides-item"><p>cornet</p>
+                <input type="radio" name="sides" value="cornet">
             </label>
 
-
-            <label>SIZE small
-                <input type="range" id='range' name="size" min="10" value="30" max="50" step="20">
-                <h2 id="output">large</h2>
             </label>
+            <label class="sides-item"><p>lolly</p>
+                <input type="radio" name="sides" value="lolly">
+            </label>
+            </div>
+
+            <h3 class="options-subtitle">SIZE</h3>
+            <label> small
+                <input type="range" id='range' name="size" min="10" value="30" max="50" step="20"> large
+            </label>
+           
             <label>
-                ice-creamSelect
+                <h3 class="options-subtitle">ice-creamSelect</h3>
                 <select name="ice-creamSelect">
 
                     <optgroup label="Low calorie">
@@ -76,20 +76,9 @@
                 </select>
             </label>
 
-            <label>
-                Payment
-                <input type="text" list="dataBase">
-
-                <datalist id="dataBase">
-                    <option value="cash">$</option>
-                    <option value="card">Visa</option>
-                    <option value="bc">BC</option>
-                </datalist>
-            </label>
-
         </fieldset>
 
-        <fieldset name="radioField">
+        <fieldset class="delivery-list" name="radioField">
             <legend>Delivery</legend>
             <label>to go
                 <input type="radio" name="delivery" value="to go">
@@ -98,37 +87,30 @@
                 <input type="radio" name="delivery" value="delivery">
             </label>
             
+            <label>
+                <h3 class="options-subtitle">Payment</h3>
+                <input type="text" list="dataBase">
+                <datalist id="dataBase">
+                    <option value="cash" selected>$</option>
+                    <option value="card">Visa</option>
+                    <option value="bc">BC</option>
+                </datalist>
+            </label>
+            
         </fieldset>
 
-
-        <label> Fedback
-            <textarea name="feedback" rows="5">Вы хорошие потому что:</textarea>
+        <div class="feedback-box">
+            <label for="comment_input">Feedback</label>
+        <label> 
+            <textarea id="comment_input" name="feedback" rows="3" placeholder="Comment"></textarea>
         </label>
-
-
-        <label>
-            By submitting the form, I consent to the processing of personal data and <span>accept the user agreement</span>
+        <label class="feedback-box-checkbox">
             <input type="checkbox" name="agree">
+            By submitting the form, I consent to the processing of personal data and <a href="">accept the user agreement</a>
         </label>
 
-        <button type="submit">Submit</button>
+        <button class="button-submit" type="submit">Submit</button>
+    </div>
     </form>
     </div>
   </div>
-
-   <!-- <script src="./modal-buy-now.js"></script>
-
-    (() => {
-        const refs = {
-          openModalBtn: document.querySelector('[data-modal-open]'),
-          closeModalBtn: document.querySelector('[data-modal-close]'),
-          modal: document.querySelector('[data-modal]'),
-        };
-      
-        refs.openModalBtn.addEventListener('click', toggleModal);
-        refs.closeModalBtn.addEventListener('click', toggleModal);
-      
-        function toggleModal() {
-          refs.modal.classList.toggle('is-hidden');
-        }
-      })(); -->

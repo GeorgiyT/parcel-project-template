@@ -1,3 +1,4 @@
+
 @media (max-width:768px) {
     .footer {
         padding-top: 56px;
@@ -30,20 +31,21 @@
         justify-content: space-between;
         padding: 0 36px 36px 97px;
     }
+
 }
 
-@media (min-width:768px) and (max-width:1280px) {
-    .footer-label {
-        padding-top: 7px;
-        margin-bottom: 16px;
-    }
-    .footer-title,
-    .footer-label {
-        width: 340px;
-    }
-    .footer-copyright {
-        padding: 29px 0 18px 0;
-    }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .footer-label {
+    padding-top: 7px;
+    margin-bottom: 16px;
+  }
+  .footer-title,
+  .footer-label {
+    width: 340px;
+  }
+  .footer-copyright {
+    padding: 29px 0 18px 0;
+  }
 }
 
 @media (min-width:1280px) {
@@ -70,53 +72,54 @@
     .footer-copyright {
         padding: 9px 0 10px 0;
     }
+
 }
 
 .footer-social {
-    display: flex;
-    justify-content: flex-end;
-    @media screen and(max-width: 300px) {
-        gap: 10.0857142857142%;
-    }
-    @media screen and(max-width: 1280px) {
-        margin-bottom: 46px;
-    }
-    @media screen and(min-width: 300px)and(max-width: 1280px) {
-        gap: 30px;
-    }
+  display: flex;
+  justify-content: flex-end;
+  @media screen and(max-width: 300px) {
+    gap: 10.0857142857142%;
+  }
+  @media screen and(max-width: 1280px) {
+    margin-bottom: 46px;
+  }
+  @media screen and(min-width: 300px) and(max-width: 1280px) {
+    gap: 30px;
+  }
 }
 
 .footer-link {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &:nth-child(1) {
-        &>.footer-icon {
-            width: 58.8125%;
-        }
-        @media screen and(min-width:1280px) {
-            margin-right: 24px;
-        }
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:nth-child(1) {
+    & > .footer-icon {
+      width: 58.8125%;
     }
-    &:nth-child(2) {
-        &>.footer-icon {
-            width: 60%;
-        }
-        @media screen and(min-width:1280px) {
-            margin-right: 25px;
-        }
+    @media screen and(min-width:1280px) {
+      margin-right: 24px;
     }
-    &:nth-child(3) {
-        &>.footer-icon {
-            height: 60%;
-        }
+  }
+  &:nth-child(2) {
+    & > .footer-icon {
+      width: 60%;
     }
+    @media screen and(min-width:1280px) {
+      margin-right: 25px;
+    }
+  }
+  &:nth-child(3) {
+    & > .footer-icon {
+      height: 60%;
+    }
+  }
 }
 
 .footer-icon {
-    max-height: 100%;
-    max-width: 100%;
-    stroke: none;
+  max-height: 100%;
+  max-width: 100%;
+  stroke: none;
 }
