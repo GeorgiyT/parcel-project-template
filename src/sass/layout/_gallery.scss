@@ -1,14 +1,15 @@
 .gallery {
-  background-image: linear-gradient(#fff5f6 39%, white 41%);
-
-  padding-bottom: 80px;
+  background-image: linear-gradient(#fff5f6 46.5%, white 46.5%);
+  padding-top: 49px;
+  padding-bottom: 40px;
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 121px;
+    padding-top: 70px;
+    padding-bottom: 60px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-bottom: 123px;
+    padding-bottom: 62px;
   }
 
   .masonry {
@@ -24,6 +25,9 @@
       }
       @media screen and (min-width: 1280px) {
         margin-right: 7px;
+      }
+      &:last-child {
+        margin-right: 0px;
       }
     }
 

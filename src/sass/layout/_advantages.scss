@@ -1,21 +1,30 @@
 .advantages {
   background-color: $sections-background;
+  padding: 20px 0 48px;
+
+  @media screen and (min-width: 768px) {
+    padding: 33px 0 70px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 20px;
+  }
 }
 
 .advent__list {
-  margin-right: 50px;
-  padding-bottom: 97px;
+  // margin-right: 50px;
+  // padding-bottom: 97px;
 
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-right: unset;
-    padding-bottom: 140px;
+    // margin-right: unset;
+    // padding-bottom: 140px;
     margin-left: -58px;
   }
 
   @media screen and (min-width: 1280px) {
     margin-left: -30px;
-    padding-bottom: 139px;
+    // padding-bottom: 139px;
   }
 }
 
