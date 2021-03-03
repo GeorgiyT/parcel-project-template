@@ -1048,6 +1048,23 @@ svg {
     left: -69px;
   }
 }
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+}
+@media screen and (min-width: 768px) {
+  .products {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+}
+
 .products-natural {
   font-family: "Titan One", cursive;
   font-weight: 400;
@@ -1073,7 +1090,6 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 121px;
 }
 
 .products-item {
@@ -1170,10 +1186,6 @@ svg {
   margin: 0 auto;
 }
 
-.products-list {
-  margin-bottom: 98px;
-}
-
 @media screen and (min-width: 768px) {
   .products-natural {
     font-size: 26px;
@@ -1205,13 +1217,7 @@ svg {
     display: flex;
   }
 
-  .products-title {
-    margin-top: 122px;
-    margin-bottom: 145px;
-  }
-
   .products-item {
-    margin-bottom: 130px;
     width: 220px;
     min-height: 485px;
     padding: 155px 11px 4px 11px;
@@ -1264,14 +1270,6 @@ svg {
   }
   .products-item:not(:last-child) {
     margin-right: 24px;
-  }
-
-  .products-title {
-    margin-top: 127px;
-  }
-
-  .products-list {
-    margin-bottom: 119px;
   }
 }
 .products-dots {
