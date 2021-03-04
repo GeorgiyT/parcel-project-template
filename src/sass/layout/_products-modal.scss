@@ -16,37 +16,55 @@
         justify-content: center;
         align-items: center;
         transition: all 0.8s ease 0s;
-        // &:nth-child(2) {
-        // background: linear-gradient(45deg, #F0D1A5, transparent);
-        @media (max-width: 1280px) {
-            display: none;
-        }
     }
     
     .products-modal-window {
+    
         position: relative;
         background-color: rgb(250, 236, 236);
         width: 70%;
         height: 70%;
+        
         border-radius: 20px;
         display: flex;
-        max-width: 800px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding-top: 30px;
-        padding-right: 30px;
+        padding-top: 40px;
+        padding-right: 40px;
+        overflow:hidden;
+
+        @media screen and (min-width:768px) {
+            max-width:600px;
+            max-height:600px;
+        }
+
+        @media screen and (min-width:1280px) {
+            max-width:900px;
+            max-height:900px;
+        }
     }
+    
     
     .modal-closing {
         position: absolute;
-        top: -12%;
-        right: -11%;
-        background-color: white;
+        top: 5px;
+        right: 5px;
+        background-color: transparent;
         border: none;
         border-radius: 50%;
-        width: 70px;
-        height: 70px;
+        width: 40px;
+        height: 40px;
+        transition: 500ms;
         cursor: pointer;
+        &:hover{
+            background-color: white;
+            transform:scale(1.1);
+        }
+        &:hover svg{
+           stroke:$title-color;
+           
+        }
     }
+
     
     .products-modal-one {
         &::before {
@@ -62,46 +80,59 @@
             background-repeat: no-repeat;
             opacity: 0.7;
             transform: rotate(20deg);
+            }
             &:hover::before {
                 content: "";
                 opacity: 1;
                 transition: 500ms linear;
             }
-        }
     }
     
-    .modal-circle-first,
-    .modal-circle-second {
+    
+    .products-modal-circle-first,
+    .products-modal-circle-second {
         background: #f16a8a98;
         filter: blur(3px);
         position: absolute;
-        z-index: -23;
         border-radius: 50%;
+        
     }
     
-    .modal-circle-first {
+    .products-modal-circle-first {
         height: 40%;
         width: 40%;
-        bottom: 6%;
+        bottom: -6%;
         right: 7%;
+        opacity:0.6;
     }
     
-    .modal-circle-second {
+    .products-modal-circle-second {
         height: 30%;
         width: 30%;
-        bottom: 12%;
-        right: 15%;
+        bottom: -10%;
+        right: -3%;
+        opacity:0.7;
     }
     
     .products-modal-title {
         font-family: $headers-font;
         font-weight: normal;
-        font-size: 2.5vw;
-        line-height: 40px;
+        font-size: 2.5vh;
+        line-height: 1.2;
         color: #D41443;
         text-shadow: 2px 2px black;
         text-align: end;
         letter-spacing: 0.04em;
+        padding-left:40px;
+
+        @media screen and (min-width:768px) {
+        font-size: 25px;
+        }
+        @media screen and (min-width:768px) {
+        font-size: 30px;
+        
+        }
+
     }
     
     .products-modal-text {
@@ -115,13 +146,17 @@
         right: 4%;
         border-radius: 10px;
         background: #d12ba83d;
-        padding: 30px;
+        padding: 5%;
         font-family: $main-font;
         font-weight: 700;
-        font-size: 1.6vw;
-        line-height: 40px;
+        font-size: 1.6vh;
+        line-height: 1.1;
         color: white;
         text-shadow: 2px 2px black;
+
+        @media screen and (min-width:768px) {
+        font-size: 20px;
+        }
     }
     
     .products-modal-textBottom {
@@ -132,12 +167,19 @@
         width: 50%;
         height: 90%;
         position: absolute;
-        bottom: -68%;
+        bottom: -55%;
         right: 4%;
         font-family: $main-font;
         font-weight: 500;
-        font-size: 1.2vw;
-        line-height: 1.6;
+        font-size: 2.2vh;
+        line-height: 1.1;
+        z-index:1;
+
+        @media screen and (min-width:768px) {
+        font-size: 20px;
+        bottom: -62%;
+
+        }
     }
     
     .products-modal-two {
@@ -148,20 +190,19 @@
             height: 71%;
             background-size: contain;
             display: block;
-            top: 23%;
-            left: -6%;
+            top: 8%;
+            left: -10%;
             background-image: url("../images/products/desktop/icelatte@2x-1200.png");
             background-repeat: no-repeat;
             opacity: 0.7;
             transform: rotate(5deg);
+            }
             &:hover::before {
                 content: "";
-                opacity: 0;
-                // transform:scale(1);
+                opacity: 1;
                 transition: 500ms linear;
             }
         }
-    }
     
     .products-modal-three {
         &::before {
@@ -177,11 +218,11 @@
             background-repeat: no-repeat;
             opacity: 0.7;
             transform: rotate(5deg);
+            }
             &:hover::before {
                 content: "";
-                opacity: 0;
-                // transform:scale(1);
+                opacity: 1;
                 transition: 500ms linear;
             }
         }
-    }
+    
