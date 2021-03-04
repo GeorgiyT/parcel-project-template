@@ -117,24 +117,41 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"readmore.js":[function(require,module,exports) {
-document.querySelector(".made-button").addEventListener("click", readMore);
-
-function readMore() {
-  var dots = document.getElementById("dots");
-  var more = document.getElementById("more");
-  var btn = document.getElementById("btn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btn.innerHTML = "Read more  <svg class=\"made-arrow\">\n        <use href=\"./sprite.5ec50489.svg#icon-arrow-more\"></use>\n    </svg>";
-    more.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btn.innerHTML = "Cancel  <svg class=\"made-arrow\">\n        <use href=\"./sprite.5ec50489.svg#icon-arrow-more\"></use>\n    </svg>";
-    more.style.display = "inline";
-  }
-}
+})({"btnToTop.js":[function(require,module,exports) {
+$(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() != 0) {
+      $('#toTop').fadeIn();
+    } else {
+      $('#toTop').fadeOut();
+    }
+  });
+  $('#toTop').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+  });
+});
+$(document).ready(function () {
+  $("#menu").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+});
+$(document).ready(function () {
+  $("#second-menu").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -339,5 +356,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","readmore.js"], null)
-//# sourceMappingURL=/readmore.1be05715.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","btnToTop.js"], null)
+//# sourceMappingURL=/btnToTop.71e1c1c4.js.map

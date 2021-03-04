@@ -117,24 +117,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"readmore.js":[function(require,module,exports) {
-document.querySelector(".made-button").addEventListener("click", readMore);
+})({"app.js":[function(require,module,exports) {
+var mouseCursor = document.querySelector(".cursor");
+var navLinks = document.querySelectorAll('.nav-links li, h1');
+window.addEventListener("mousemove", cursor);
 
-function readMore() {
-  var dots = document.getElementById("dots");
-  var more = document.getElementById("more");
-  var btn = document.getElementById("btn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btn.innerHTML = "Read more  <svg class=\"made-arrow\">\n        <use href=\"./sprite.5ec50489.svg#icon-arrow-more\"></use>\n    </svg>";
-    more.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btn.innerHTML = "Cancel  <svg class=\"made-arrow\">\n        <use href=\"./sprite.5ec50489.svg#icon-arrow-more\"></use>\n    </svg>";
-    more.style.display = "inline";
-  }
+function cursor(e) {
+  mouseCursor.style.top = e.pageY + 'px';
+  mouseCursor.style.left = e.pageX + 'px';
 }
+
+navLinks.forEach(function (link) {
+  link.addEventListener('mouseleave', function () {
+    mouseCursor.classList.remove("link-grow");
+    link.classList.remove("hovered-link");
+  });
+  link.addEventListener('mouseover', function () {
+    mouseCursor.classList.add("link-grow");
+    link.classList.add("hovered-link");
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -163,7 +165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58825" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58660" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -339,5 +341,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","readmore.js"], null)
-//# sourceMappingURL=/readmore.1be05715.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","app.js"], null)
+//# sourceMappingURL=/app.c328ef1a.js.map
