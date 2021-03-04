@@ -12,59 +12,69 @@
         top: 0;
         left: 0;
         background: linear-gradient(45deg, #FFA5BA, transparent);
-        display: flex;
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
         justify-content: center;
         align-items: center;
         transition: all 0.8s ease 0s;
     }
     
     .products-modal-window {
-    
         position: relative;
         background-color: rgb(250, 236, 236);
         width: 70%;
         height: 70%;
-        
         border-radius: 20px;
         display: flex;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         padding-top: 40px;
         padding-right: 40px;
-        overflow:hidden;
-
-        @media screen and (min-width:768px) {
-            max-width:600px;
-            max-height:600px;
+        overflow: hidden;
+        @media screen and (min-width: 768px) {
+            width: 600px;
+            height: 600px;
         }
-
-        @media screen and (min-width:1280px) {
-            max-width:900px;
-            max-height:900px;
+        @media screen and (min-width: 1280px) {
+            width: 800px;
+            height: 800px;
         }
     }
-    
     
     .modal-closing {
         position: absolute;
         top: 5px;
         right: 5px;
         background-color: transparent;
-        border: none;
+        border: $title-color 1px solid;
         border-radius: 50%;
         width: 40px;
         height: 40px;
         transition: 500ms;
         cursor: pointer;
-        &:hover{
-            background-color: white;
-            transform:scale(1.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        &:focus svg {
+            stroke: $title-color;
         }
-        &:hover svg{
-           stroke:$title-color;
-           
+        &:hover {
+            background-color: white;
+            border: white 1px solid;
+            box-shadow: 0 4px 8px 0 rgba(182, 77, 77, 0.2), 0 6px 20px 0 rgba(253, 2, 2, 0.19);
+            transform: scale(1.1);
+            outline: none;
+        }
+        &:active,
+        &:focus {
+            outline: none;
+        }
+        &:hover svg {
+            stroke: $title-color;
         }
     }
-
     
     .products-modal-one {
         &::before {
@@ -80,14 +90,13 @@
             background-repeat: no-repeat;
             opacity: 0.7;
             transform: rotate(20deg);
-            }
-            &:hover::before {
-                content: "";
-                opacity: 1;
-                transition: 500ms linear;
-            }
+        }
+        &:hover::before {
+            content: "";
+            opacity: 1;
+            transition: 500ms linear;
+        }
     }
-    
     
     .products-modal-circle-first,
     .products-modal-circle-second {
@@ -95,7 +104,6 @@
         filter: blur(3px);
         position: absolute;
         border-radius: 50%;
-        
     }
     
     .products-modal-circle-first {
@@ -103,7 +111,7 @@
         width: 40%;
         bottom: -6%;
         right: 7%;
-        opacity:0.6;
+        opacity: 0.6;
     }
     
     .products-modal-circle-second {
@@ -111,7 +119,7 @@
         width: 30%;
         bottom: -10%;
         right: -3%;
-        opacity:0.7;
+        opacity: 0.7;
     }
     
     .products-modal-title {
@@ -123,16 +131,13 @@
         text-shadow: 2px 2px black;
         text-align: end;
         letter-spacing: 0.04em;
-        padding-left:40px;
-
-        @media screen and (min-width:768px) {
-        font-size: 25px;
+        padding-left: 40px;
+        @media screen and (min-width: 768px) {
+            font-size: 25px;
         }
         @media screen and (min-width:768px) {
-        font-size: 30px;
-        
+            font-size: 30px;
         }
-
     }
     
     .products-modal-text {
@@ -153,9 +158,8 @@
         line-height: 1.1;
         color: white;
         text-shadow: 2px 2px black;
-
-        @media screen and (min-width:768px) {
-        font-size: 20px;
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
         }
     }
     
@@ -173,12 +177,10 @@
         font-weight: 500;
         font-size: 2.2vh;
         line-height: 1.1;
-        z-index:1;
-
-        @media screen and (min-width:768px) {
-        font-size: 20px;
-        bottom: -62%;
-
+        z-index: 1;
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+            bottom: -62%;
         }
     }
     
@@ -196,13 +198,13 @@
             background-repeat: no-repeat;
             opacity: 0.7;
             transform: rotate(5deg);
-            }
-            &:hover::before {
-                content: "";
-                opacity: 1;
-                transition: 500ms linear;
-            }
         }
+        &:hover::before {
+            content: "";
+            opacity: 1;
+            transition: 500ms linear;
+        }
+    }
     
     .products-modal-three {
         &::before {
@@ -218,11 +220,10 @@
             background-repeat: no-repeat;
             opacity: 0.7;
             transform: rotate(5deg);
-            }
-            &:hover::before {
-                content: "";
-                opacity: 1;
-                transition: 500ms linear;
-            }
         }
-    
+        &:hover::before {
+            content: "";
+            opacity: 1;
+            transition: 500ms linear;
+        }
+    }
