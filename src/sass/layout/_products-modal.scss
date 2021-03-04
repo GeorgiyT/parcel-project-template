@@ -18,6 +18,9 @@
         transition: all 0.8s ease 0s;
         // &:nth-child(2) {
         // background: linear-gradient(45deg, #F0D1A5, transparent);
+        @media (max-width: 1280px) {
+            display: none;
+        }
     }
     
     .products-modal-window {
@@ -159,8 +162,6 @@
             }
         }
     }
-    
-    
     
     .products-modal-three {
         &::before {
