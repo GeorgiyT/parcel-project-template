@@ -1404,6 +1404,185 @@ svg {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
+.products-modal-bg {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #FFA5BA, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease 0s;
+}
+@media (max-width: 1280px) {
+  .products-modal-bg {
+    display: none;
+  }
+}
+
+.products-modal-window {
+  position: relative;
+  background-color: #faecec;
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
+  display: flex;
+  max-width: 800px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.modal-closing {
+  position: absolute;
+  top: -12%;
+  right: -11%;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.products-modal-one::before {
+  content: "";
+  position: absolute;
+  width: 44%;
+  height: 93%;
+  background-size: contain;
+  display: block;
+  top: 14%;
+  left: 0%;
+  background-image: url("/icecrem@2x-1200.03e8a2de.png");
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  transform: rotate(20deg);
+}
+.products-modal-one::before:hover::before {
+  content: "";
+  opacity: 1;
+  transition: 500ms linear;
+}
+
+.modal-circle-first,
+.modal-circle-second {
+  background: #f16a8a98;
+  filter: blur(3px);
+  position: absolute;
+  z-index: -23;
+  border-radius: 50%;
+}
+
+.modal-circle-first {
+  height: 40%;
+  width: 40%;
+  bottom: 6%;
+  right: 7%;
+}
+
+.modal-circle-second {
+  height: 30%;
+  width: 30%;
+  bottom: 12%;
+  right: 15%;
+}
+
+.products-modal-title {
+  font-family: "Titan One", cursive;
+  font-weight: normal;
+  font-size: 2.5vw;
+  line-height: 40px;
+  color: #D41443;
+  text-shadow: 2px 2px black;
+  text-align: end;
+  letter-spacing: 0.04em;
+}
+
+.products-modal-text {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 43%;
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  border-radius: 10px;
+  background: #d12ba83d;
+  padding: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.6vw;
+  line-height: 40px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.products-modal-textBottom {
+  display: block;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  width: 50%;
+  height: 90%;
+  position: absolute;
+  bottom: -68%;
+  right: 4%;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 1.6;
+}
+
+.products-modal-two::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 71%;
+  background-size: contain;
+  display: block;
+  top: 23%;
+  left: -6%;
+  background-image: url("/icelatte@2x-1200.b381dbc8.png");
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  transform: rotate(5deg);
+}
+.products-modal-two::before:hover::before {
+  content: "";
+  opacity: 0;
+  transition: 500ms linear;
+}
+
+.products-modal-three::before {
+  content: "";
+  position: absolute;
+  width: 77%;
+  height: 71%;
+  background-size: contain;
+  display: block;
+  top: 23%;
+  left: -10%;
+  background-image: url("/milkshakes@2x-1200.06274ebb.png");
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  transform: rotate(5deg);
+}
+.products-modal-three::before:hover::before {
+  content: "";
+  opacity: 0;
+  transition: 500ms linear;
+}
+
 .made {
   padding-top: 125px;
   padding-bottom: 20px;
