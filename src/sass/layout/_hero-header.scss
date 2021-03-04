@@ -6,6 +6,12 @@
     opacity: 1;
   }
 }
+#toTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding-left: 25px;
+}
 
 .header picture {
   animation: fade-in 1s linear;
