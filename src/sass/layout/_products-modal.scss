@@ -17,12 +17,12 @@
     justify-content: center;
     align-items: center;
     transition: all 0.8s ease 0s;
-    //   transition: visibility 0s opacity 0.5s;
-    &:target {
-        visibility: visible;
-        opacity: 1;
-    }
+   
+    // &:nth-child(2) {
+    // background: linear-gradient(45deg, #F0D1A5, transparent);
 }
+
+
 
 .products-modal-window {
     position: relative;
@@ -35,14 +35,21 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-top: 30px;
     padding-right: 30px;
+    // overflow: hidden;
 }
 
 .modal-closing {
     position: absolute;
     top: -12%;
     right: -11%;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width:70px;
+    height:70px;
+    cursor: pointer;
 }
-
+    
 .products-modal-one {
     &::before {
         content: "";
@@ -51,21 +58,23 @@
         height: 93%;
         background-size: contain;
         display: block;
-        top: 15%;
-        left: 3%;
+        top: 14%;
+        left: 0%;
         background-image: url("../images/hero-header/desktop/icecrem@2x-1200.png");
         background-repeat: no-repeat;
         opacity: 0.6;
         transform: rotate(20deg);
-    }
+        
     &:hover::before {
         content: "";
         opacity: 1;
         // transform:scale(1);
         transition: 500ms linear;
     }
-}
 
+    
+}
+}
 .modal-circle-first,
 .modal-circle-second {
     background: #f16a8a98;
@@ -105,10 +114,10 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 40%;
+    width: 43%;
     position: absolute;
-    top: 18%;
-    right: 6%;
+    top: 25%;
+    right: 4%;
     border-radius: 10px;
     background: #d12ba83d;
     padding: 30px;
@@ -129,9 +138,60 @@
     height: 90%;
     position: absolute;
     bottom: -57%;
-    right: 0%;
+    right: 4%;
     font-family: $main-font;
     font-weight: 500;
-    font-size: 2vw;
+    font-size: 30px;
     line-height: 40px;
+}
+
+.products-modal-two {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 75%;
+        height: 71%;
+        background-size: contain;
+        display: block;
+        top: 23%;
+        left: -6%;
+        background-image: url("../images/products/desktop/icelatte@2x-1200.png");
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        transform: rotate(5deg);
+        
+    &:hover::before {
+        content: "";
+        opacity: 0;
+        // transform:scale(1);
+        transition: 500ms linear;
+    }
+}
+}
+.products-modal-two .products-modal-textBottom{
+    bottom: -51%;
+}
+
+.products-modal-three {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 64%;
+        height: 71%;
+        background-size: contain;
+        display: block;
+        top: 23%;
+        left: -6%;
+        background-image: url("../images/products/desktop/milkshakes@2x-1200.png");
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        transform: rotate(5deg);
+        
+    &:hover::before {
+        content: "";
+        opacity: 0;
+        // transform:scale(1);
+        transition: 500ms linear;
+    }
+}
 }
