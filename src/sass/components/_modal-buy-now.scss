@@ -12,24 +12,41 @@
     pointer-events: none;
   }
 }
-
-.modal-buy-now{
+.header-modal {
+  display: flex;
+}
+// body.modal-open {
+//   overflow: hidden;
+// }
+.modal-buy-now {
   width: 95%;
   padding: 0 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(../images/customer-reviews/ice.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(139, 82, 94, 0.562),
+      rgba(134, 65, 99, 0.356)
+    ),
+    url(../images/customer-reviews/ice.jpg);
+  // background-image: url();
+  // background-color: $mobile-menu-background-color;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%),
     0 2px 1px rgb(0 0 0 / 20%);
   border-radius: 4px;
-
+  .feedback-box {
+    display: none;
+  }
   @media screen and (min-width: 480px) {
     width: 450px;
+    .feedback-box {
+      display: flex;
+    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -53,12 +70,12 @@
   margin-right: 8px;
 
   .icon-close-svg {
-  display: block;
-  width: 10px;
-  height: 10px;
-  fill: black;
-  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
-}
+    display: block;
+    width: 10px;
+    height: 10px;
+    fill: black;
+    transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .button-close {
@@ -70,6 +87,7 @@
 }
 
 .modal-title {
+  width: 92%;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
@@ -77,37 +95,37 @@
   color: black;
 }
 
-.bio-list{
+.bio-list {
   display: flex;
   flex-wrap: wrap;
-  
+
   font-weight: 600;
   font-size: 13px;
   line-height: 1.5;
   color: black;
 }
 
-.bio-item{
+.bio-item {
   position: relative;
-  &:not(:last-child){
-  margin-bottom: 8px;
+  &:not(:last-child) {
+    margin-bottom: 8px;
   }
 }
 
-.modal-buy-now input{
-  background-color:#E1E1E1;
+.modal-buy-now input {
+  background-color: #e1e1e1;
   border-radius: 4px;
   border: 1px solid red;
 }
 
-.options-list{
+.options-list {
   font-weight: 600;
   font-size: 13px;
   line-height: 1.5;
   color: black;
 }
 
-.sides-list{
+.sides-list {
   display: flex;
 
   font-weight: 600;
@@ -116,20 +134,20 @@
   color: black;
 }
 
-.sides-item{
-  &:not(:last-child){
+.sides-item {
+  &:not(:last-child) {
     margin-right: 18px;
-    }
+  }
 }
 
-.delivery-list{
+.delivery-list {
   font-weight: 600;
   font-size: 13px;
   line-height: 1.5;
   color: black;
 }
 
-.feedback-box{
+.feedback-box {
   display: flex;
   flex-direction: column;
 
@@ -139,24 +157,24 @@
   color: black;
 }
 
-.feedback-box label{
+.feedback-box label {
   margin-left: 10px;
 }
 
-.feedback-box textarea{
-  background-color:#E1E1E1;
+.feedback-box textarea {
+  background-color: #e1e1e1;
   border-radius: 4px;
   border: 1px solid red;
 }
 
-.options-subtitle{
+.options-subtitle {
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
   color: black;
 }
 
-.feedback-box-checkbox{
+.feedback-box-checkbox {
   font-weight: 600;
   font-size: 10px;
   line-height: 1.5;
@@ -165,7 +183,7 @@
   margin-bottom: 10px;
 }
 
-.button-submit{
+.button-submit {
   width: 150px;
   height: 30px;
   background: #d41443;
@@ -178,5 +196,3 @@
   display: block;
   cursor: pointer;
 }
-
-
