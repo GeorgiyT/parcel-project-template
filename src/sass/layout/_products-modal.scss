@@ -35,7 +35,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-top: 30px;
     padding-right: 30px;
-    // overflow: hidden;
+    
 }
 
 .modal-closing {
@@ -62,13 +62,12 @@
         left: 0%;
         background-image: url("../images/hero-header/desktop/icecrem@2x-1200.png");
         background-repeat: no-repeat;
-        opacity: 0.6;
+        opacity: 0.7;
         transform: rotate(20deg);
         
     &:hover::before {
         content: "";
         opacity: 1;
-        // transform:scale(1);
         transition: 500ms linear;
     }
 
@@ -157,7 +156,7 @@
         left: -6%;
         background-image: url("../images/products/desktop/icelatte@2x-1200.png");
         background-repeat: no-repeat;
-        opacity: 0.6;
+        opacity: 0.7;
         transform: rotate(5deg);
         
     &:hover::before {
@@ -176,15 +175,15 @@
     &::before {
         content: "";
         position: absolute;
-        width: 64%;
+        width: 77%;
         height: 71%;
         background-size: contain;
         display: block;
         top: 23%;
-        left: -6%;
+        left: -10%;
         background-image: url("../images/products/desktop/milkshakes@2x-1200.png");
         background-repeat: no-repeat;
-        opacity: 0.6;
+        opacity: 0.7;
         transform: rotate(5deg);
         
     &:hover::before {
