@@ -129,12 +129,12 @@
         width: 50%;
         height: 90%;
         position: absolute;
-        bottom: -57%;
+        bottom: -68%;
         right: 4%;
         font-family: $main-font;
         font-weight: 500;
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 1.2vw;
+        line-height: 1.6;
     }
     
     .products-modal-two {
@@ -160,9 +160,7 @@
         }
     }
     
-    .products-modal-two .products-modal-textBottom {
-        bottom: -51%;
-    }
+    
     
     .products-modal-three {
         &::before {
