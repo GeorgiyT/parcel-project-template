@@ -5,7 +5,7 @@
         openModalBtn3: document.querySelector('[products-milkshake]'),
         text1: document.querySelector('[products-modal-one]'),
         text2: document.querySelector('[products-modal-two]'),
-        text3: document.querySelector('[products-modal-third]'),
+        text3: document.querySelector('[products-modal-three]'),
         closeModalBtn: document.querySelector('[products-modal-close]'),
         modal: document.querySelector('[products-modal]'),
     };
