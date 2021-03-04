@@ -1,7 +1,6 @@
 // -----------------------MODAL  WINDOW   ICE  CREAM------------------------------
 .hidden {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 }
 
 .products-modal-bg {
@@ -17,12 +16,9 @@
     justify-content: center;
     align-items: center;
     transition: all 0.8s ease 0s;
-   
     // &:nth-child(2) {
     // background: linear-gradient(45deg, #F0D1A5, transparent);
 }
-
-
 
 .products-modal-window {
     position: relative;
@@ -45,11 +41,11 @@
     background-color: white;
     border: none;
     border-radius: 50%;
-    width:70px;
-    height:70px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
 }
-    
+
 .products-modal-one {
     &::before {
         content: "";
@@ -64,17 +60,15 @@
         background-repeat: no-repeat;
         opacity: 0.6;
         transform: rotate(20deg);
-        
-    &:hover::before {
-        content: "";
-        opacity: 1;
-        // transform:scale(1);
-        transition: 500ms linear;
+        &:hover::before {
+            content: "";
+            opacity: 1;
+            // transform:scale(1);
+            transition: 500ms linear;
+        }
     }
+}
 
-    
-}
-}
 .modal-circle-first,
 .modal-circle-second {
     background: #f16a8a98;
@@ -159,16 +153,16 @@
         background-repeat: no-repeat;
         opacity: 0.6;
         transform: rotate(5deg);
-        
-    &:hover::before {
-        content: "";
-        opacity: 0;
-        // transform:scale(1);
-        transition: 500ms linear;
+        &:hover::before {
+            content: "";
+            opacity: 0;
+            // transform:scale(1);
+            transition: 500ms linear;
+        }
     }
 }
-}
-.products-modal-two .products-modal-textBottom{
+
+.products-modal-two .products-modal-textBottom {
     bottom: -51%;
 }
 
@@ -186,12 +180,11 @@
         background-repeat: no-repeat;
         opacity: 0.6;
         transform: rotate(5deg);
-        
-    &:hover::before {
-        content: "";
-        opacity: 0;
-        // transform:scale(1);
-        transition: 500ms linear;
+        &:hover::before {
+            content: "";
+            opacity: 0;
+            // transform:scale(1);
+            transition: 500ms linear;
+        }
     }
-}
 }
