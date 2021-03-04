@@ -65,115 +65,124 @@
                 transition: 500ms linear;
             }
         }
-        .modal-circle-first,
-        .modal-circle-second {
-            background: #f16a8a98;
-            filter: blur(3px);
+    }
+    
+    .modal-circle-first,
+    .modal-circle-second {
+        background: #f16a8a98;
+        filter: blur(3px);
+        position: absolute;
+        z-index: -23;
+        border-radius: 50%;
+    }
+    
+    .modal-circle-first {
+        height: 40%;
+        width: 40%;
+        bottom: 6%;
+        right: 7%;
+    }
+    
+    .modal-circle-second {
+        height: 30%;
+        width: 30%;
+        bottom: 12%;
+        right: 15%;
+    }
+    
+    .products-modal-title {
+        font-family: $headers-font;
+        font-weight: normal;
+        font-size: 2.5vw;
+        line-height: 40px;
+        color: #D41443;
+        text-shadow: 2px 2px black;
+        text-align: end;
+        letter-spacing: 0.04em;
+    }
+    
+    .products-modal-text {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 43%;
+        position: absolute;
+        top: 25%;
+        right: 4%;
+        border-radius: 10px;
+        background: #d12ba83d;
+        padding: 30px;
+        font-family: $main-font;
+        font-weight: 700;
+        font-size: 1.6vw;
+        line-height: 40px;
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+    
+    .products-modal-textBottom {
+        display: block;
+        display: flex;
+        justify-content: right;
+        text-align: right;
+        width: 50%;
+        height: 90%;
+        position: absolute;
+        bottom: -57%;
+        right: 4%;
+        font-family: $main-font;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .products-modal-two {
+        &::before {
+            content: "";
             position: absolute;
-            z-index: -23;
-            border-radius: 50%;
-        }
-        .modal-circle-first {
-            height: 40%;
-            width: 40%;
-            bottom: 6%;
-            right: 7%;
-        }
-        .modal-circle-second {
-            height: 30%;
-            width: 30%;
-            bottom: 12%;
-            right: 15%;
-        }
-        .products-modal-title {
-            font-family: $headers-font;
-            font-weight: normal;
-            font-size: 2.5vw;
-            line-height: 40px;
-            color: #D41443;
-            text-shadow: 2px 2px black;
-            text-align: end;
-            letter-spacing: 0.04em;
-        }
-        .products-modal-text {
+            width: 75%;
+            height: 71%;
+            background-size: contain;
             display: block;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            width: 43%;
-            position: absolute;
-            top: 25%;
-            right: 4%;
-            border-radius: 10px;
-            background: #d12ba83d;
-            padding: 30px;
-            font-family: $main-font;
-            font-weight: 700;
-            font-size: 1.6vw;
-            line-height: 40px;
-            color: white;
-            text-shadow: 2px 2px black;
-        }
-        .products-modal-textBottom {
-            display: block;
-            display: flex;
-            justify-content: right;
-            text-align: right;
-            width: 50%;
-            height: 90%;
-            position: absolute;
-            bottom: -57%;
-            right: 4%;
-            font-family: $main-font;
-            font-weight: 500;
-            font-size: 30px;
-            line-height: 40px;
-        }
-        .products-modal-two {
-            &::before {
+            top: 23%;
+            left: -6%;
+            background-image: url("../images/products/desktop/icelatte@2x-1200.png");
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            transform: rotate(5deg);
+            &:hover::before {
                 content: "";
-                position: absolute;
-                width: 75%;
-                height: 71%;
-                background-size: contain;
-                display: block;
-                top: 23%;
-                left: -6%;
-                background-image: url("../images/products/desktop/icelatte@2x-1200.png");
-                background-repeat: no-repeat;
-                opacity: 0.7;
-                transform: rotate(5deg);
-                &:hover::before {
-                    content: "";
-                    opacity: 0;
-                    // transform:scale(1);
-                    transition: 500ms linear;
-                }
+                opacity: 0;
+                // transform:scale(1);
+                transition: 500ms linear;
             }
         }
-        .products-modal-two .products-modal-textBottom {
-            bottom: -51%;
-        }
-        .products-modal-three {
-            &::before {
+    }
+    
+    .products-modal-two .products-modal-textBottom {
+        bottom: -51%;
+    }
+    
+    .products-modal-three {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 77%;
+            height: 71%;
+            background-size: contain;
+            display: block;
+            top: 23%;
+            left: -10%;
+            background-image: url("../images/products/desktop/milkshakes@2x-1200.png");
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            transform: rotate(5deg);
+            &:hover::before {
                 content: "";
-                position: absolute;
-                width: 77%;
-                height: 71%;
-                background-size: contain;
-                display: block;
-                top: 23%;
-                left: -10%;
-                background-image: url("../images/products/desktop/milkshakes@2x-1200.png");
-                background-repeat: no-repeat;
-                opacity: 0.7;
-                transform: rotate(5deg);
-                &:hover::before {
-                    content: "";
-                    opacity: 0;
-                    // transform:scale(1);
-                    transition: 500ms linear;
-                }
+                opacity: 0;
+                // transform:scale(1);
+                transition: 500ms linear;
             }
         }
     }
