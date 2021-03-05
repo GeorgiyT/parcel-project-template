@@ -1200,8 +1200,12 @@ svg {
 }
 
 .products-item .pointer-button {
-  display: block;
+  display: none;
   margin: 0 auto;
+}
+
+.products-item .products-muleta {
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -1209,6 +1213,10 @@ svg {
     font-size: 26px;
     line-height: 30px;
     margin-bottom: 15px;
+  }
+
+  .products-item .pointer-button {
+    display: block;
   }
 
   .products-label {
@@ -1233,6 +1241,10 @@ svg {
 
   .products-list {
     display: flex;
+  }
+
+  .products-item .products-muleta {
+    display: none;
   }
 
   .products-item {
@@ -1417,14 +1429,14 @@ svg {
   top: 0;
   left: 0;
   background: linear-gradient(45deg, #FFA5BA, transparent);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   transition: all 0.8s ease 0s;
 }
-@media (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .products-modal-bg {
-    display: none;
+    display: flex;
   }
 }
 
@@ -1435,22 +1447,55 @@ svg {
   height: 70%;
   border-radius: 20px;
   display: flex;
-  max-width: 800px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding-top: 30px;
-  padding-right: 30px;
+  padding-top: 40px;
+  padding-right: 40px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .products-modal-window {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products-modal-window {
+    width: 800px;
+    height: 800px;
+  }
 }
 
 .modal-closing {
   position: absolute;
-  top: -12%;
-  right: -11%;
-  background-color: white;
-  border: none;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: #d41443 1px solid;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
+  transition: 500ms;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.modal-closing:focus svg {
+  stroke: #d41443;
+}
+.modal-closing:hover {
+  background-color: white;
+  border: white 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(182, 77, 77, 0.2), 0 6px 20px 0 rgba(253, 2, 2, 0.19);
+  transform: scale(1.1);
+  outline: none;
+}
+.modal-closing:active, .modal-closing:focus {
+  outline: none;
+}
+.modal-closing:hover svg {
+  stroke: #d41443;
 }
 
 .products-modal-one::before {
@@ -1467,44 +1512,56 @@ svg {
   opacity: 0.7;
   transform: rotate(20deg);
 }
-.products-modal-one::before:hover::before {
+.products-modal-one:hover::before {
   content: "";
   opacity: 1;
   transition: 500ms linear;
 }
 
-.modal-circle-first,
-.modal-circle-second {
+.products-modal-circle-first,
+.products-modal-circle-second {
   background: #f16a8a98;
   filter: blur(3px);
   position: absolute;
-  z-index: -23;
   border-radius: 50%;
 }
 
-.modal-circle-first {
+.products-modal-circle-first {
   height: 40%;
   width: 40%;
-  bottom: 6%;
+  bottom: -6%;
   right: 7%;
+  opacity: 0.6;
 }
 
-.modal-circle-second {
+.products-modal-circle-second {
   height: 30%;
   width: 30%;
-  bottom: 12%;
-  right: 15%;
+  bottom: -10%;
+  right: -3%;
+  opacity: 0.7;
 }
 
 .products-modal-title {
   font-family: "Titan One", cursive;
   font-weight: normal;
-  font-size: 2.5vw;
-  line-height: 40px;
+  font-size: 2.5vh;
+  line-height: 1.2;
   color: #D41443;
   text-shadow: 2px 2px black;
   text-align: end;
   letter-spacing: 0.04em;
+  padding-left: 40px;
+}
+@media screen and (min-width: 768px) {
+  .products-modal-title {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products-modal-title {
+    font-size: 30px;
+  }
 }
 
 .products-modal-text {
@@ -1518,13 +1575,18 @@ svg {
   right: 4%;
   border-radius: 10px;
   background: #d12ba83d;
-  padding: 30px;
+  padding: 5%;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  font-size: 1.6vw;
-  line-height: 40px;
+  font-size: 1.6vh;
+  line-height: 1.1;
   color: white;
   text-shadow: 2px 2px black;
+}
+@media screen and (min-width: 768px) {
+  .products-modal-text {
+    font-size: 20px;
+  }
 }
 
 .products-modal-textBottom {
@@ -1535,12 +1597,19 @@ svg {
   width: 50%;
   height: 90%;
   position: absolute;
-  bottom: -68%;
+  bottom: -55%;
   right: 4%;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
-  font-size: 1.2vw;
-  line-height: 1.6;
+  font-size: 2.2vh;
+  line-height: 1.1;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .products-modal-textBottom {
+    font-size: 20px;
+    bottom: -62%;
+  }
 }
 
 .products-modal-two::before {
@@ -1550,16 +1619,16 @@ svg {
   height: 71%;
   background-size: contain;
   display: block;
-  top: 23%;
-  left: -6%;
+  top: 8%;
+  left: -10%;
   background-image: url("/icelatte@2x-1200.b381dbc8.png");
   background-repeat: no-repeat;
   opacity: 0.7;
   transform: rotate(5deg);
 }
-.products-modal-two::before:hover::before {
+.products-modal-two:hover::before {
   content: "";
-  opacity: 0;
+  opacity: 1;
   transition: 500ms linear;
 }
 
@@ -1577,9 +1646,9 @@ svg {
   opacity: 0.7;
   transform: rotate(5deg);
 }
-.products-modal-three::before:hover::before {
+.products-modal-three:hover::before {
   content: "";
-  opacity: 0;
+  opacity: 1;
   transition: 500ms linear;
 }
 
