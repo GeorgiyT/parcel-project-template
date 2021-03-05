@@ -1,0 +1,120 @@
+<div class="backdrop is-hiddenn" data-buy-now>
+    <div class="modal-buy-now">
+        <div class="header-modal">
+            <h2 class="modal-title">Leave your details, we will make delivery or call you back</h2>
+            <button class="button-close" data-buy-now-close>
+                <svg class="icon-close-svg">
+                    <use href="./images/customer-reviews/Closed.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+        <form name="ice-creame" autocomplete="on">
+
+            <fieldset class="bio-list">
+                <div>BIO</div>
+                <div class="bio-item">Name
+                    <input type="text" name="name" placeholder="Vaycheslav" required>
+                </div>
+                <div class="bio-item">Surname
+                    <input type="text" name="surname" placeholder="Rusanov">
+                </div>
+                <div class="bio-item">Email
+                    <input type="email" name="email" placeholder="aloha@gmil.com" required>
+                </div>
+                <div class="bio-item">Tel
+                    <input type="tel" name="tal" value="" required
+                        pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$">
+                </div>
+            </fieldset>
+
+
+            <fieldset class="options-list">
+                <legend>OPTIONS</legend>
+
+                <div>Quantity
+                    <input type="number" name="quantity" min="1" max="25" value="1" step="1">
+                </div>
+
+                <h3 class="options-subtitle">Sides</h3>
+                <div class="sides-list">
+                    <div class="sides-item">
+                        <p>braces</p>
+                        <input type="radio" name="sides" value="braces">
+                    </div>
+                    <div class="sides-item">
+                        <p>wafer</p>
+                        <input type="radio" name="sides" value="wafer">
+
+                    </div>
+                    <div class="sides-item">
+                        <p>cornet</p>
+                        <input type="radio" name="sides" value="cornet">
+                    </div>
+
+                    <div class="sides-item">
+                        <p>lolly</p>
+                        <input type="radio" name="sides" value="lolly">
+                    </div>
+                </div>
+
+                <h3 class="options-subtitle">SIZE</h3>
+                <div> small
+                    <input type="range" id='range' name="size" min="10" value="30" max="50" step="20"> large
+                </div>
+
+                <div>
+                    <h3 class="options-subtitle">ice-creamSelect</h3>
+                    <select name="ice-creamSelect">
+
+                        <optgroup label="Low calorie">
+                            <option value="Neapolitan">Neapolitan</option>
+                            <option value="green tea ice cream" selected>green tea ice cream</option>
+                            <option value="Eskimo">Eskimo</option>
+                        </optgroup>
+                        <optgroup label="Normal colorie">
+                            <option value="caramel cream">caramel cream</option>
+                            <option value="rocky">rocky</option>
+                            <option value="coconut">coconut</option>
+                        </optgroup>
+
+                    </select>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="delivery-list" name="radioField">
+                <legend>Delivery</legend>
+                <div>to go
+                    <input type="radio" name="delivery" value="to go">
+                </div>
+                <div>delivery
+                    <input type="radio" name="delivery" value="delivery">
+                </div>
+
+                <div>
+                    <h3 class="options-subtitle">Payment</h3>
+                    <input type="text" list="dataBase">
+                    <datalist id="dataBase">
+                        <option value="cash" selected>$</option>
+                        <option value="card">Visa</option>
+                        <option value="bc">BC</option>
+                    </datalist>
+                </div>
+
+            </fieldset>
+
+            <div class="feedback-box">
+                <label for="comment_input">Feedback</label>
+                <label>
+                    <textarea id="comment_input" name="feedback" rows="3" placeholder="Comment"></textarea>
+                </label>
+                <label class="feedback-box-checkbox">
+                    <input type="checkbox" name="agree">
+                    By submitting the form, I consent to the processing of personal data and <a href="">accept the user
+                        agreement</a>
+                </label>
+                
+            </div><button class="button-submit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>

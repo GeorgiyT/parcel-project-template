@@ -4,4 +4,26 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
+//MODERN-NORMILIZE
+@import './utils/modern-normilize';
+//VARIABLES
+@import './variables/variables';
+//BASE
+@import './base/common';
+@import './base/container';
+//UTILS
+@import './utils/visually-hidden';
+//COMPONENTS
+@import './components/sections';
+@import './components/button';
+@import './components/modal-buy-now';
+//LAYOUT
+@import './layout/hero-header';
+@import './layout/products';
+@import './layout/products-modal';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
